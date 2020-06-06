@@ -1,0 +1,75 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+
+  //   flex-direction - decides what will be the direction of the flex container/content, default value is row
+  //   flex-direction: [row|column|row-reverse|column-reverse];
+  flex-direction: row;
+
+  //   flex-wrap - it works in resizing the window, default value is nowrap
+  //   flex-wrap: [nowrap|wrap|wrap-reverse];
+  //   flex-wrap: wrap;
+
+  //   flex-flow - short hand of flex-direction and flex wrap
+  //   flex-flow: flex-direction flex-wrap;
+  //   flex-flow: [row|column|row-reverse|column-reverse] [wrap|nowrap|wrap-reverse];
+  //   flex-flow: row wrap;
+
+  //   justify-content - what will be the orientation of the content in flex container (based on flex-direction)
+  //   justify-content: [flex-start|center|flex-end|space-around|space-between|space-evenly];
+  justify-content: flex-start;
+
+  //   align-items - align items based on flex-direction but in reverse
+  //   align-items: [baseline|stretch|flex-start|center|flex-end];
+  align-items: center;
+
+  .box:nth-child(1) {
+    background: #1736be;
+    height: 200px;
+    width: 200px;
+
+    // order - decides on what order or what position
+    // order: [0-numberOfItems|numeric];
+    order: 0;
+
+    // flex-grow - taking the rest of the space in items (it is like fr(fraction) in css grid)
+    // flex-grow: [0-dependsOnYou|numeric];
+    // flex-grow: 1;
+
+    // flex-shrink - the higher the number, the fastest to shrink, default value is 1, 0 will be no shrink.
+    // flex-shrink: [0-dependsOnYou|numeric]; flex-shrink(speed) = value * 1;
+    // flex-shrink: 2;
+
+    // flex-basis - setting the width of the item
+    // flex-basis: [numeric+units];
+    // flex-basis: 300px;
+
+    // flex - short hand of flex-grow, flex-shrink and flex-basis
+    // flex: [0-dependsOnYou|numeric] [0-dependsOnYou|numeric] [numeric+units];
+    flex: 1 0 500px;
+  }
+  .box:nth-child(2) {
+    background-color: rgb(16, 236, 145);
+    height: 200px;
+    width: 200px;
+    order: 1;
+  }
+  .box:nth-child(3) {
+    background-color: rgb(161, 150, 51);
+    height: 200px;
+    width: 200px;
+    order: 3;
+  }
+  .box:nth-child(4) {
+    background-color: rgb(131, 32, 32);
+    height: 200px;
+    width: 200px;
+    order: 2;
+  }
+}
